@@ -10,6 +10,10 @@ import org.springframework.stereotype.Service;
 
 
 public interface UserService extends JpaRepository<Userdtls, Integer> {
-//    @Query("select u from Userdtls u where u.email = :email")
-//    public Userdtls getuserbyemail(@Param("email") String email);
+    String uemail="arnab@gmail.com";
+    @Query("select u from Userdtls u where u.email = :email")
+    public Userdtls getuserbyemail( String email);
+
+    @Query("select u.username from Userdtls u where u.email = :email")
+    public String getNamebyEmail(String email);
 }

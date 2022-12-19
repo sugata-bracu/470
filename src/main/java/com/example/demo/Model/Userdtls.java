@@ -23,6 +23,20 @@ public class Userdtls {
 
     public int age;
 
+    public Userdtls(int id, String email, String username, int birthnumber, String gender, String birthday, String password, int phone, String address, int age, String role) {
+        this.id = id;
+        this.email = email;
+        this.username = username;
+        this.birthnumber = birthnumber;
+        this.gender = gender;
+        this.birthday = birthday;
+        this.password = password;
+        this.phone = phone;
+        this.address = address;
+        this.age = age;
+        this.role = role;
+    }
+
     public int getAge() {
         return age;
     }
@@ -113,6 +127,6 @@ public class Userdtls {
 
     @Override
     public String toString() {
-        return super.toString();
+        return email;
     }
 }
